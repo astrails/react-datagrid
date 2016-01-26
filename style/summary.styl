@@ -1,14 +1,14 @@
 .react-datagrid
-  .z-footer-wrapper
+  .react-datagrid__footer-wrapper
     background $datagrid-summary-row-background
 
-  .z-summary
+  .react-datagrid__summary
     border-top $datagrid-header-border-width $datagrid-header-border-style $datagrid-header-border-color
     align-items stretch /* for vertical aligning text in header */
 
-    .z-cell
+    .react-datagrid__cell
       position relative
-      .z-inner
+      .react-datagrid__inner
         display flex
 
         align-items center
@@ -17,7 +17,7 @@
 
         height 100%
 
-      .z-content
+      .react-datagrid__content
         text-overflow ellipsis
         white-space nowrap
         overflow hidden

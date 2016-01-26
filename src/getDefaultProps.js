@@ -29,7 +29,7 @@ module.exports = function(){
         virtualRendering: true,
 
         styleAlternateRowsCls: 'z-style-alternate',
-        withColumnMenuCls: 'z-with-column-menu',
+        withColumnMenuCls: 'react-datagrid--with-column-menu',
         cellEllipsisCls: 'z-cell-ellipsis',
         defaultClassName: 'react-datagrid',
 
@@ -40,7 +40,7 @@ module.exports = function(){
         resizableColumns: null,
         reorderColumns: null,
 
-        emptyCls: 'z-empty',
+        emptyCls: 'react-datagrid--empty',
         emptyTextStyle: null,
         emptyWrapperStyle: null,
 

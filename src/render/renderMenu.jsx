@@ -6,7 +6,7 @@ module.exports = function renderMenu(props){
     }
 
     return props.menu({
-        className : 'z-header-menu-column',
+        className : 'react-datagrid__header__menu__column',
         gridColumns: props.columns
     })
 }

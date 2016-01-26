@@ -179,20 +179,20 @@ module.exports = React.createClass({
   prepareClassName: function(props, state){
       var className = props.className || ''
 
-      className += ' z-row '
+      className += ' react-datagrid__row '
 
       if (props.index % 2 === 0){
-        className += ' z-even ' + (props.evenClassName || '')
+        className += ' react-datagrid__row--even ' + (props.evenClassName || '')
       } else {
-        className += ' z-odd ' + (props.oddClassName || '')
+        className += ' react-datagrid__row--odd ' + (props.oddClassName || '')
       }
 
       if (state.mouseOver){
-        className += ' z-over ' + (props.overClassName || '')
+        className += ' react-datagrid__row--over ' + (props.overClassName || '')
       }
 
       if (props.selected){
-        className += ' z-selected ' + (props.selectedClassName || '')
+        className += ' react-datagrid__row--selected ' + (props.selectedClassName || '')
       }
 
       return className

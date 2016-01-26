@@ -92,9 +92,9 @@ module.exports = React.createClass({
 
     getDefaultProps: function(){
         return {
-            defaultClassName : 'z-header-wrapper',
-            draggingClassName: 'z-dragging',
-            cellClassName    : 'z-column-header',
+            defaultClassName : 'react-datagrid__header-wrapper',
+            draggingClassName: 'react-datagrid__header-wrapper--dragging',
+            cellClassName    : 'react-datagrid__header__cell',
             defaultStyle    : {},
             sortInfo        : null,
             scrollLeft      : 0,
@@ -153,7 +153,7 @@ module.exports = React.createClass({
 
         return (
             <div style={style} className={props.className}>
-                <div className='z-header' style={headerStyle}>
+                <div className='react-datagrid__header' style={headerStyle}>
                     {cells}
                 </div>
             </div>
@@ -176,7 +176,7 @@ module.exports = React.createClass({
         }
 
         if (state.dragColumn === column){
-            className += ' z-drag z-over'
+            className += ` ${props.cellClassName}--drag ${props.cellClassName}--over`
             style.zIndex = 1
             style.left = state.dragLeft || 0
         }
@@ -186,43 +186,43 @@ module.exports = React.createClass({
                             </svg>
 
         var filter  = column.filterable?
-                        <div className="z-show-filter" onMouseUp={this.handleFilterMouseUp.bind(this, column)}>
+                        <div className={`${props.cellClassName}__filter`} onMouseUp={this.handleFilterMouseUp.bind(this, column)}>
                             {filterIcon}
                         </div>
                         :
                         null
 
         var resizer = column.resizable?
-                        <span className="z-column-resize" onMouseDown={this.handleResizeMouseDown.bind(this, column)} />:
+                        <span className={`${props.cellClassName}__resize`} onMouseDown={this.handleResizeMouseDown.bind(this, column)} />:
                         null
 
         if (column.sortable){
-            text = <span >{text}<span className="z-icon-sort-info" /></span>
+            text = <span >{text}<span className={`${props.cellClassName}__icon-sort-info`} /></span>
 
             var sortInfo = getColumnSortInfo(column, props.sortInfo)
 
             if (sortInfo && sortInfo.dir){
                 className += (sortInfo.dir === -1 || sortInfo.dir === 'desc'?
-                                ' z-desc':
-                                ' z-asc')
+                                ` ${props.cellClassName}--desc`:
+                                ` ${props.cellClassName}--asc`)
             }
 
-            className += ' z-sortable'
+            className += ` ${props.cellClassName}--sortable`
         }
 
         if (filter){
-            className += ' z-filterable'
+            className += ` ${props.cellClassName}--filterable`
         }
 
         if (state.mouseOver === column.name && !resizing){
-            className += ' z-over'
+            className += ` ${props.cellClassName}--over`
         }
 
         if (props.menuColumn === column.name){
-            className += ' z-active'
+            className += ` ${props.cellClassName}--active`
         }
 
-        className += ' z-unselectable'
+        className += ` ${props.cellClassName}--unselectable`
 
         var events = {}
 
@@ -292,7 +292,7 @@ module.exports = React.createClass({
                 <polygon points="0,0 1.5,3 3,0 " style={{fill: props.menuIconColor,strokeWidth:0, fillRule: 'nonZero'}} />
             </svg>
 
-        return <div className="z-show-menu" onMouseUp={this.handleShowMenuMouseUp.bind(this, props, column, index)}>
+        return <div className="react-datagrid__header__button-show-menu" onMouseUp={this.handleShowMenuMouseUp.bind(this, props, column, index)}>
             {menuIcon}
         </div>
     },
@@ -315,7 +315,7 @@ module.exports = React.createClass({
             }
 
             return {
-                cls     : visible?'z-selected': '',
+                cls     : visible? 'react-datagrid__header__menu__row--selected': '',
                 selected: visible? <span style={{fontSize: '0.95em'}}>✓</span>: '',
                 label   : column.title,
                 fn      : this.toggleColumn.bind(this, column)

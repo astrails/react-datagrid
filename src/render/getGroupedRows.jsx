@@ -37,9 +37,9 @@ function renderGroupRow(props, groupData){
     }
 
 
-    return <Row className='z-group-row' key={'group-'+groupData.valuePath} rowHeight={props.rowHeight}>
+    return <Row className='react-datagrid__group-row' key={'group-'+groupData.valuePath} rowHeight={props.rowHeight}>
         <Cell
-            className='z-group-cell'
+            className='react-datagrid__group-cell'
             contentPadding={props.cellPadding}
             text={groupData.value}
             style={cellStyle}

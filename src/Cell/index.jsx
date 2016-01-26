@@ -48,8 +48,8 @@ var Cell = React.createClass({
         return {
             text: '',
 
-            firstClassName: 'z-first',
-            lastClassName : 'z-last',
+            firstClassName: 'react-datagrid__cell--first',
+            lastClassName : 'react-datagrid__cell--last',
 
             defaultStyle: {}
         }
@@ -123,7 +123,7 @@ var Cell = React.createClass({
             props.text
 
         var contentProps = {
-            className: 'z-content',
+            className: 'react-datagrid__content',
             style    : {
                 padding: props.contentPadding
             }
@@ -146,6 +146,6 @@ var Cell = React.createClass({
     }
 })
 
-Cell.className = 'z-cell'
+Cell.className = 'react-datagrid__cell'
 
 module.exports = Cell

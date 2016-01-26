@@ -11,6 +11,11 @@ var externals = require('./externals')
 var resolve   = require('./resolve')
 
 module.exports = {
+  watchPoll: true,
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000
+  },
   entry: entry,
   output: {
     publicPath: PUBLIC

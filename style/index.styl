@@ -3,7 +3,7 @@
 @import '~react-virtual-scroller/index.styl'
 @import './constants.styl'
 
-.z-unselectable
+.react-datagrid__cell--unselectable
   touch-callout none
   user-select none
 
@@ -17,46 +17,48 @@ datagrid-cell()
     align-items center
     cursor $datagrid-cell-cursor
 
-    .z-content
+    .react-datagrid__content
         white-space nowrap
         overflow hidden
         text-overflow ellipsis
         padding 0px $datagrid-cell-padding
+        
+
 
 @import './resize.styl'
 
 .react-datagrid
 
-    .z-row
-    .react-datagrid-pagination-toolbar
+    .react-datagrid__row
+    .react-datagrid__pagination-toolbar
         user-select none
 
-    .loadmask
+    .react-datagrid__loadMask
         z-index 100
-    .z-header-menu-column
+    .react-datagrid__header__menu__column
         z-index 100
 
     flex-flow column
     align-items stretch
 
-    & > .z-inner
+    & > .react-datagrid__inner
         flex 1
         overflow hidden
         position relative
         display flex
         flex-flow column
 
-        .z-wrapper
+        .react-datagrid__wrapper
             display flex
             flex-flow column
             flex 1 1 auto
             overflow hidden
 
-    .z-header-wrapper
-    .z-footer-wrapper
+    .react-datagrid__header-wrapper
+    .react-datagrid__footer-wrapper
         width 100%
 
-    .z-table
+    .react-datagrid__table
         display block
         flex 1
         /** 2 RULES FOR SAFARI VERTICAL SCROLLBAR */
@@ -64,28 +66,28 @@ datagrid-cell()
         position relative
         z-index 10
 
-    .z-header
-    .z-summary
-    .z-table .z-row
+    .react-datagrid__header
+    .react-datagrid__summary
+    .react-datagrid__table .react-datagrid__row
         display flex
         flex-flow row
         z-index 1
 
-    .z-mask-wrapper
+    .react-datagrid__mask-wrapper
         bottom 0px
         width 100%
         position absolute
         display none
 
-    &.z-loading
-        .z-mask-wrapper
+    &.react-datagrid--loading
+        .react-datagrid__mask-wrapper
             display block
 
-.react-datagrid.z-empty
-    .z-content-wrapper-fix
+.react-datagrid--empty
+    .react-datagrid__content-wrapper--fix
         display flex
 
-    .z-table-wrapper
+    .react-datagrid__table-wrapper
         flex-flow column
         justify-content center
         align-items center

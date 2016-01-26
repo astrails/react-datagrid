@@ -10,8 +10,8 @@ var TestUtils = React.addons.TestUtils
 var DataGrid  = require('../DataGrid')
 
 var TABLE_CLASS         = 'z-table'
-var ROW_CLASS           = 'z-row'
-var CELL_CLASS          = 'z-cell'
+var ROW_CLASS           = 'react-datagrid__row'
+var CELL_CLASS          = 'react-datagrid__cell'
 var CELLTEXT_CLASS      = 'z-text'
 var COLUMN_HEADER_CLASS = 'z-column-header'
 var COL_MENU_BTN        = 'z-show-menu'

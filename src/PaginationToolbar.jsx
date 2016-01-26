@@ -178,7 +178,7 @@ module.exports = React.createClass({
 	prepareClassName: function(props) {
 		var className = props.className || ''
 
-		className += ' react-datagrid-pagination-toolbar'
+		className += ' react-datagrid__pagination-toolbar'
 
 		return className
 

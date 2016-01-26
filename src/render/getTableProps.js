@@ -27,7 +27,7 @@ module.exports = function(props, rows){
     // }
 
     return {
-        className: 'z-table',
+        className: 'react-datagrid__table',
         style: tableStyle(props),
         children: rows
     }

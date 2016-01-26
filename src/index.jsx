@@ -377,7 +377,7 @@ module.exports = React.createClass({
 
     prepareFooter: function(props, state){
         return (props.footerFactory || React.DOM.div)({
-            className: 'z-footer-wrapper'
+            className: 'react-datagrid__footer-wrapper'
         })
     },
 
@@ -423,7 +423,7 @@ module.exports = React.createClass({
         var loadMask
 
         if (props.loadMaskOverHeader){
-            loadMask = <LoadMask visible={props.loading} />
+            loadMask = <LoadMask className="react-datagrid__load-mask" visible={props.loading} />
         }
 
         var paginationToolbar
@@ -467,7 +467,7 @@ module.exports = React.createClass({
         var result = (
             <div {...renderProps}>
                 {topToolbar}
-                <div className="z-inner">
+                <div className="react-datagrid__inner">
                     {header}
                     {wrapper}
                     {footer}

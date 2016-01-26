@@ -5,10 +5,10 @@ var React     = require('react/addons')
 var TestUtils = React.addons.TestUtils
 
 var TABLE_CLASS         = 'z-table'
-var ROW_CLASS           = 'z-row'
+var ROW_CLASS           = 'react-datagrid__row'
 var GROUP_ROW_CLASS		= 'z-group-row'
 var GROUPED_ROW_CLASS	= 'z-grouped'
-var CELL_CLASS          = 'z-cell'
+var CELL_CLASS          = 'react-datagrid__cell'
 var CELL_TEXT_CLASS     = 'z-text'
 var ALIGN_RIGHT_CLASS   = 'z-align-right'
 var SORT_ASC_CLASS      = 'z-asc'
