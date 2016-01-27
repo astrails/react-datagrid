@@ -24,9 +24,9 @@
         align-items stretch /* for vertical aligning text in header */
   
     &.react-datagrid--with-column-menu
-        .react-datagrid__header__cell
+        .react-datagrid__column-header
 
-            .react-datagrid__header__cell__filter
+            .react-datagrid__column-header__filter
             .react-datagrid__header__button-show-menu
                 display none
                 position absolute
@@ -43,7 +43,7 @@
             //     // padding-top 3px
             //     align-items center
             //     padding-bottom 6px
-            .react-datagrid__header__cell__filter
+            .react-datagrid__column-header__filter
                 // &::after
                 //     content ' '
                 //     display block
@@ -61,7 +61,7 @@
                 //     // border-right $datagrid-column-sort-icon-width solid transparent
                 //     // border-top $datagrid-column-sort-icon-height solid $datagrid-column-sort-icon-color
 
-            .react-datagrid__header__cell__filter
+            .react-datagrid__column-header__filter
                 right $datagrid-column-menu-icon-width
                 background $datagrid-column-menu-icon-hover-background
 
@@ -76,20 +76,20 @@
                 //     display block
                 //     border-left 3px solid $datagrid-column-sort-icon-color
 
-            &.react-datagrid__header__cell--filterable .react-datagrid__header__cell__filter.react-datagrid__header__cell--active
-            &.react-datagrid__header__cell--filterable .react-datagrid__header__cell__filter:hover
-            .react-datagrid__header__button-show-menu.react-datagrid__header__cell--active
+            &.react-datagrid__column-header--filterable .react-datagrid__column-header__filter.react-datagrid__column-header--active
+            &.react-datagrid__column-header--filterable .react-datagrid__column-header__filter:hover
+            .react-datagrid__header__button-show-menu.react-datagrid__column-header--active
             .react-datagrid__header__button-show-menu:hover
                 background $datagrid-column-menu-icon-hover-background
 
-            &.react-datagrid__header__cell--active .react-datagrid__header__button-show-menu
-            &.react-datagrid__header__cell--active.react-datagrid__header__cell--filterable .react-datagrid__header__cell__filter
+            &.react-datagrid__column-header--active .react-datagrid__header__button-show-menu
+            &.react-datagrid__column-header--active.react-datagrid__column-header--filterable .react-datagrid__column-header__filter
 
-            &.react-datagrid__header__cell--over .react-datagrid__header__button-show-menu
+            &.react-datagrid__column-header--over .react-datagrid__header__button-show-menu
                 display block
-            &.react-datagrid__header__cell--over.react-datagrid__header__cell--filterable .react-datagrid__header__cell__filter
+            &.react-datagrid__column-header--over.react-datagrid__column-header--filterable .react-datagrid__column-header__filter
                 display block
-            &.react-datagrid__header__cell--filtered
+            &.react-datagrid__column-header--filtered
                 font-style italic
 
     //styles for column headers
@@ -99,10 +99,10 @@
         border-bottom $datagrid-header-border-width $datagrid-header-border-style $datagrid-header-border-color
 
         &.react-datagrid__header-wrapper--dragging
-            .react-datagrid__header__cell:not(.react-datagrid__header__cell--drag)
+            .react-datagrid__column-header:not(.react-datagrid__column-header--drag)
                 transition left 0.4s
 
-    .react-datagrid__header__cell
+    .react-datagrid__column-header
         position relative
         font-weight $datagrid-column-header-font-weight
 
@@ -123,15 +123,15 @@
             white-space nowrap
             overflow hidden
 
-        &.react-datagrid__header__cell--sortable
+        &.react-datagrid__column-header--sortable
             .react-datagrid__inner
                 cursor pointer
 
-        &.react-datagrid__header__cell--over
+        &.react-datagrid__column-header--over
             background $datagrid-header-over-background
 
         //style for the sort icon
-        .react-datagrid__header__cell__icon-sort-info
+        .react-datagrid__column-header__icon-sort-info
             display inline-block
             size 0px
             margin-left 10px
@@ -139,11 +139,11 @@
             border-right $datagrid-column-sort-icon-width solid transparent
 
         &.react-datagrid__cell--asc
-            .react-datagrid__header__cell__icon-sort-info
+            .react-datagrid__column-header__icon-sort-info
                 border-bottom $datagrid-column-sort-icon-height solid $datagrid-column-sort-icon-color
 
         &.react-datagrid__cell--desc
-            .react-datagrid__header__cell__icon-sort-info
+            .react-datagrid__column-header__icon-sort-info
                 border-top $datagrid-column-sort-icon-height solid $datagrid-column-sort-icon-color
 
         //styles to be applied to the column header when it is dragged
@@ -173,8 +173,8 @@
                     display none !important
 
     //set left border correctly for each column header. (the first one should not have a left border)
-    .react-datagrid__header .react-datagrid__header__cell:not(.react-datagrid__header__cell--first)
+    .react-datagrid__header .react-datagrid__column-header:not(.react-datagrid__column-header--first)
         border-left $datagrid-header-border-width $datagrid-header-border-style $datagrid-header-border-color
 
-    .react-datagrid__header .react-datagrid__header__cell.react-datagrid__header__cell--last
+    .react-datagrid__header .react-datagrid__column-header.react-datagrid__column-header--last
         border-right $datagrid-header-border-width $datagrid-header-border-style $datagrid-header-border-color
