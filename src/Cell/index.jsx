@@ -77,7 +77,7 @@ var Cell = React.createClass({
         }
 
         if (textAlign){
-            className += ' z-align-' + textAlign
+            className += ' react-datagrid__cell--align-' + textAlign
         }
 
         return className
