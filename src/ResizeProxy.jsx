@@ -30,6 +30,6 @@ module.exports = React.createClass({
             style.left    = state.offset
         }
 
-        return <div className='z-resize-proxy' style={style} />
+        return <div className='react-datagrid__resize-proxy' style={style} />
     }
 })

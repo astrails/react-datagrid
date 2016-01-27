@@ -45,7 +45,7 @@ module.exports = React.createClass({
         var verticalScrollerSize = (props.totalLength + groupsCount) * props.rowHeight// + loadersSize
 
         var content = props.empty?
-            <div className="z-empty-text" style={props.emptyTextStyle}>{props.emptyText}</div>:
+            <div className="react-datagrid__empty-text" style={props.emptyTextStyle}>{props.emptyText}</div>:
             <div {...props.tableProps} ref="table"/>
 
 

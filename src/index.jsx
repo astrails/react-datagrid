@@ -1022,7 +1022,7 @@ module.exports = React.createClass({
 
         if (props.showCellBorders){
             var cellBordersCls = props.showCellBorders === true?
-            props.showCellBordersCls + '-horizontal ' + props.showCellBordersCls + '-vertical':
+            props.showCellBordersCls + '--horizontal ' + props.showCellBordersCls + '--vertical':
             props.showCellBordersCls + '-' + props.showCellBorders
 
             props.className += ' ' + cellBordersCls

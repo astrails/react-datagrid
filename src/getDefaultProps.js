@@ -28,9 +28,9 @@ module.exports = function(){
         scrollBy: undefined,
         virtualRendering: true,
 
-        styleAlternateRowsCls: 'z-style-alternate',
+        styleAlternateRowsCls: 'react-datagrid-style-alternate',
         withColumnMenuCls: 'react-datagrid--with-column-menu',
-        cellEllipsisCls: 'z-cell-ellipsis',
+        cellEllipsisCls: 'react-datagrid--ellipsis',
         defaultClassName: 'react-datagrid',
 
         withColumnMenu: true,
@@ -46,7 +46,7 @@ module.exports = function(){
 
         loadMaskOverHeader: true,
 
-        showCellBordersCls: 'z-cell-borders',
+        showCellBordersCls: 'react-datagrid__borders',
         showCellBorders: false,
         styleAlternateRows: true,
         cellEllipsis: true,

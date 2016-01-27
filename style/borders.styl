@@ -1,14 +1,14 @@
 .react-datagrid
-    &.z-cell-borders-horizontal
+    &.react-datagrid__borders--horizontal
         .react-datagrid__cell:not(.react-datagrid__header__column)
             border-bottom $datagrid-cell-border-width $datagrid-cell-border-style $datagrid-cell-border-color
 
-    &.z-cell-borders-vertical
+    &.react-datagrid__borders--vertical
 
-        .z-group-row .react-datagrid__cell:not(.react-datagrid__header__column)
+        .react-datagrid__group-row .react-datagrid__cell:not(.react-datagrid__header__column)
         .react-datagrid__cell.z-last:not(.react-datagrid__header__column)
             border-right $datagrid-cell-border-width $datagrid-cell-border-style $datagrid-cell-border-color
 
         .react-datagrid__cell
-            &:not(.z-first):not(.react-datagrid__header__column)
+            &:not(.react-datagrid__cell--first):not(.react-datagrid__header__column)
                 border-left $datagrid-cell-border-width $datagrid-cell-border-style $datagrid-cell-border-color

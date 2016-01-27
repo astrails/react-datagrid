@@ -76,20 +76,20 @@
                 //     display block
                 //     border-left 3px solid $datagrid-column-sort-icon-color
 
-            &.z-filterable .react-datagrid__header__cell__filter.z-active
-            &.z-filterable .react-datagrid__header__cell__filter:hover
-            .react-datagrid__header__button-show-menu.z-active
+            &.react-datagrid__header__cell--filterable .react-datagrid__header__cell__filter.react-datagrid__header__cell--active
+            &.react-datagrid__header__cell--filterable .react-datagrid__header__cell__filter:hover
+            .react-datagrid__header__button-show-menu.react-datagrid__header__cell--active
             .react-datagrid__header__button-show-menu:hover
                 background $datagrid-column-menu-icon-hover-background
 
-            &.z-active .react-datagrid__header__button-show-menu
-            &.z-active.z-filterable .react-datagrid__header__cell__filter
+            &.react-datagrid__header__cell--active .react-datagrid__header__button-show-menu
+            &.react-datagrid__header__cell--active.react-datagrid__header__cell--filterable .react-datagrid__header__cell__filter
 
-            &.z-over .react-datagrid__header__button-show-menu
+            &.react-datagrid__header__cell--over .react-datagrid__header__button-show-menu
                 display block
-            &.z-over.z-filterable .react-datagrid__header__cell__filter
+            &.react-datagrid__header__cell--over.react-datagrid__header__cell--filterable .react-datagrid__header__cell__filter
                 display block
-            &.z-filtered
+            &.react-datagrid__header__cell--filtered
                 font-style italic
 
     //styles for column headers
