@@ -7,12 +7,12 @@ var React     = require('react/addons')
 var TestUtils = React.addons.TestUtils
 var DataGrid  = require('../DataGrid')
 
-var TABLE_CLASS         = 'z-table'
-var ROW_CLASS           = 'z-row'
-var CELL_CLASS          = 'z-cell'
-var CELLTEXT_CLASS      = 'z-content'
-var COLUMN_HEADER_CLASS = 'z-column-header'
-var COL_MENU_BTN        = 'z-show-menu'
+var TABLE_CLASS         = 'react-datagrid__table'
+var ROW_CLASS           = 'react-datagrid__row'
+var CELL_CLASS          = 'react-datagrid__cell'
+var CELLTEXT_CLASS      = 'react-datagrid__content'
+var COLUMN_HEADER_CLASS = 'react-datagrid__column-header'
+var COL_MENU_BTN        = 'react-datagrid__header__button-show-menu'
 
 var testUtils = require('../utils')
 

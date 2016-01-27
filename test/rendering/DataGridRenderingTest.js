@@ -4,12 +4,12 @@ var DataGrid  = require('../DataGrid')
 var React     = require('react/addons')
 var TestUtils = React.addons.TestUtils
 
-var TABLE_CLASS         = 'z-table'
-var ROW_CLASS           = 'z-row'
-var LOADMASK			= 'loadmask'
-var COLUMN_HEADER_CLASS = 'z-column-header'
-var COL_MENU_BTN        = 'z-show-menu'
-var EMPTY_TEXT_CLASS	= 'z-empty-text'
+var TABLE_CLASS         = 'react-datagrid__table'
+var ROW_CLASS           = 'react-datagrid__row'
+var LOADMASK			= 'react-datagrid__load_mask'
+var COLUMN_HEADER_CLASS = 'react-datagrid__column-header'
+var COL_MENU_BTN        = 'react-datagrid__header__button-show-menu'
+var EMPTY_TEXT_CLASS	= 'eact-datagrid__empty-text'
 var EMPTY_TEXT 			= 'No records'
 
 var testUtils = require('../utils')

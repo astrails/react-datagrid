@@ -21,7 +21,7 @@ function renderData(props, data, depth){
                 return CellFactory(cellProps)
             }
 
-            config.className += ' z-grouped'
+            config.className += ' react-datagrid__group-row--grouped'
 
             return config
         })
