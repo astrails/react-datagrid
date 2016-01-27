@@ -94,7 +94,7 @@ module.exports = React.createClass({
         return {
             defaultClassName : 'react-datagrid__header-wrapper',
             draggingClassName: 'react-datagrid__header-wrapper--dragging',
-            cellClassName    : 'react-datagrid__header__cell',
+            cellClassName    : 'react-datagrid__column-header',
             defaultStyle    : {},
             sortInfo        : null,
             scrollLeft      : 0,
