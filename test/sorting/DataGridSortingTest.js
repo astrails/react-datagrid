@@ -4,14 +4,14 @@ var DataGrid  = require('../DataGrid')
 var React     = require('react/addons')
 var TestUtils = React.addons.TestUtils
 
-var TABLE_CLASS         = 'z-table'
-var ROW_CLASS           = 'z-row'
-var CELL_CLASS          = 'z-cell'
+var TABLE_CLASS         = 'react-datagrid__table'
+var ROW_CLASS           = 'react-datagrid__row'
+var CELL_CLASS          = 'react-datagrid__cell'
 var CELL_TEXT_CLASS     = 'z-text'
 var ALIGN_RIGHT_CLASS   = 'z-align-right'
-var SORT_ASC_CLASS      = 'z-asc'
-var SORT_DESC_CLASS     = 'z-desc'
-var COLUMN_HEADER_CLASS = 'z-column-header'
+var SORT_ASC_CLASS      = 'react-datagrid__cell--asc'
+var SORT_DESC_CLASS     = 'react-datagrid__cell--desc'
+var COLUMN_HEADER_CLASS = 'react-datagrid__column-header'
 
 var testUtils = require('../utils')
 

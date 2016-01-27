@@ -4,8 +4,8 @@ var DataGrid  = require('../DataGrid')
 var React     = require('react/addons')
 var TestUtils = React.addons.TestUtils
 
-var TABLE_CLASS         = 'z-table'
-var ROW_CLASS           = 'z-row'
+var TABLE_CLASS         = 'react-datagrid__table'
+var ROW_CLASS           = 'react-datagrid__row'
 var REMOTE_DATA			= 'http://5.101.99.47:8090/10'
 var REMOTE_DATA_OPTIONS = '?pageSize=20&page=1&skip=0'
 

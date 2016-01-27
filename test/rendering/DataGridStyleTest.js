@@ -4,13 +4,13 @@ var DataGrid  = require('../DataGrid')
 var React     = require('react/addons')
 var TestUtils = React.addons.TestUtils
 
-var TABLE_CLASS         = 'z-table'
-var ROW_CLASS           = 'z-row'
-var CELL_CLASS			= 'z-cell'
+var TABLE_CLASS         = 'react-datagrid__table'
+var ROW_CLASS           = 'react-datagrid__row'
+var CELL_CLASS			= 'react-datagrid__cell'
 var CELL_TEXT_CLASS		= 'z-text'
 var ALIGN_RIGHT_CLASS	= 'z-align-right'
-var HORIZONTAL_BORDER	= 'z-cell-borders-horizontal'
-var VERTICAL_BORDER		= 'z-cell-borders-vertical'
+var HORIZONTAL_BORDER	= 'react-datagrid__borders--horizontal'
+var VERTICAL_BORDER		= 'react-datagrid__borders--vertical'
 
 var testUtils = require('../utils')
 
