@@ -250,8 +250,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 
 	    setVerticalScrollDelta: function setVerticalScrollDelta(scrollTopDelta) {
-	        var st = state.scrollTop + scrollTopDelta;
+	        var st = this.state.scrollTop + scrollTopDelta;
 	        this.handleScrollTop(st);
+	        return st;
 	    },
 
 	    handleScrollTop: function handleScrollTop(scrollTop) {

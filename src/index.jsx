@@ -197,8 +197,9 @@ module.exports = React.createClass({
     },
 
     setVerticalScrollDelta: function(scrollTopDelta) {
-      var st = state.scrollTop + scrollTopDelta;
+      var st = this.state.scrollTop + scrollTopDelta;
       this.handleScrollTop(st);
+      return st;
     },
 
     handleScrollTop: function(scrollTop){
