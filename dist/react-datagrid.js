@@ -259,6 +259,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        this.scrollTop = scrollTop;
 
+	        this.props.onVerticalScroll && this.props.onVerticalScroll(scrollTop);
+
 	        if (props.virtualRendering) {
 
 	            var prevIndex = this.state.startIndex || 0;
@@ -291,7 +293,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // console.log(scrollTop, sign);
 	        } else {
 	                state.scrollTop = scrollTop;
-	                this.props.onVerticalScroll && this.props.onVerticalScroll(scrollTop);
 	            }
 
 	        this.setState(state);
