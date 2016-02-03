@@ -291,7 +291,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // console.log(scrollTop, sign);
 	        } else {
 	                state.scrollTop = scrollTop;
-	                this.props.onVerticalScroll(scrollTop);
+	                this.props.onVerticalScroll && this.props.onVerticalScroll(scrollTop);
 	            }
 
 	        this.setState(state);
