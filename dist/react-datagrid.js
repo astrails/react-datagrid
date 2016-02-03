@@ -249,6 +249,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	    },
 
+	    setVerticalScrollDelta: function setVerticalScrollDelta(scrollTopDelta) {
+	        var st = state.scrollTop + scrollTopDelta;
+	        this.handleScrollTop(st);
+	    },
+
 	    handleScrollTop: function handleScrollTop(scrollTop) {
 	        var props = this.p;
 	        var state = this.state;
