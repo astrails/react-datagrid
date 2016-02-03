@@ -103,6 +103,8 @@ module.exports = React.createClass({
         loadMaskOverHeader : React.PropTypes.bool,
         idProperty       : React.PropTypes.string.isRequired,
 
+        onVerticalScroll: React.PropTypes.func,
+
         //you can customize the column menu by specifying a factory
         columnMenuFactory: React.PropTypes.func,
         onDataSourceResponse: React.PropTypes.func,
@@ -235,7 +237,8 @@ module.exports = React.createClass({
 
             // console.log(scrollTop, sign);
         } else {
-            state.scrollTop = scrollTop
+            state.scrollTop = scrollTop;
+            this.props.onVerticalScroll(scrollTop);
         }
 
         this.setState(state)
